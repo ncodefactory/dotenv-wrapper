@@ -1,5 +1,14 @@
 {
   "editor.formatOnSave": true,
   "workbench.iconTheme": "vscode-icons",
-  "cSpell.words": ["hotmail", "mochawesome"]
+  "cSpell.words": [
+    "bartosz",
+    "dotenv",
+    "hotmail",
+    "mochawesome",
+    "ncodefactory",
+    "solarski",
+    "strval",
+    "wrapper"
+  ]
 }
