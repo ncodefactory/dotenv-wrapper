@@ -1,5 +1,5 @@
 {
-  "name": "dotenv-wrapper",
+  "name": "@ncodefactory/dotenv-wrapper",
   "version": "1.0.0",
   "private": false,
   "license": "MIT",
