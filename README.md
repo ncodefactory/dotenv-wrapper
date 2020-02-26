@@ -6,12 +6,12 @@ a simple class that allows you to adapt environment variables from an .env file 
 
 ### npm: ###
 ```
-npm install dotenv-wrapper --save
+npm install @ncodefactory/dotenv-wrapper --save
 ```
 
 ### yarn: ###
 ```
-yarn add dotenv-wrapper
+yarn add @ncodefactory/dotenv-wrapper
 ```
 
 ## usage: ##
@@ -19,7 +19,7 @@ yarn add dotenv-wrapper
 ### create some environment module
 
 ```js
-import dotEnvWrapper from 'dotenv-wrapper';
+import dotEnvWrapper from '@ncodefactory/dotenv-wrapper';
 
 const environment = new dotEnvWrapper();
 environment.addNumber('HTTP_PORT', 80);
