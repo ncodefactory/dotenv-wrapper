@@ -34,4 +34,5 @@ class Wrapper {
   };
 }
 
+export { setBoolValue, setNumberValue, setStringValue };
 export default Wrapper;
