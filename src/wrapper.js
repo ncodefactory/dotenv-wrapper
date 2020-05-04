@@ -1,9 +1,10 @@
 require('dotenv').config();
 
-const setStringValue = (value, defaultStringValue) =>
-  value || defaultStringValue;
+const setStringValue = (dotEnvName, defaultStringValue) =>
+  process.env[dotEnvName] || defaultStringValue;
 
-const setNumberValue = (value, defaultNumberValue) => {
+const setNumberValue = (dotEnvName, defaultNumberValue) => {
+  const value = process.env[dotEnvName];
   const numberValue = Number(value);
   return value == null ||
     value === '' ||
@@ -13,7 +14,8 @@ const setNumberValue = (value, defaultNumberValue) => {
     : numberValue;
 };
 
-const setBoolValue = (value, defaultBoolValue) => {
+const setBoolValue = (dotEnvName, defaultBoolValue) => {
+  const value = process.env[dotEnvName];
   const boolTrue = String(value).toLowerCase() === 'true';
   const boolFalse = String(value).toLowerCase() === 'false';
 
@@ -22,15 +24,15 @@ const setBoolValue = (value, defaultBoolValue) => {
 
 class Wrapper {
   addBoolean = (dotEnvName, defaultValue) => {
-    this[dotEnvName] = setBoolValue(process.env[dotEnvName], defaultValue);
+    this[dotEnvName] = setBoolValue(dotEnvName, defaultValue);
   };
 
   addString = (dotEnvName, defaultValue) => {
-    this[dotEnvName] = setStringValue(process.env[dotEnvName], defaultValue);
+    this[dotEnvName] = setStringValue(dotEnvName, defaultValue);
   };
 
   addNumber = (dotEnvName, defaultValue) => {
-    this[dotEnvName] = setNumberValue(process.env[dotEnvName], defaultValue);
+    this[dotEnvName] = setNumberValue(dotEnvName, defaultValue);
   };
 }
 
